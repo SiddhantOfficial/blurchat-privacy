@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlurChat - Privacy for WhatsApp Web</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo-section">
+        <div class="logo-icon">🛡️</div>
+        <div class="logo-text">
+          <h1>BlurChat</h1>
+          <span class="tagline">Privacy for WhatsApp Web</span>
+        </div>
+      </div>
+      <div class="status-indicator" id="statusIndicator">
+        <span class="status-dot active"></span>
+        <span class="status-text">Active</span>
+      </div>
+    </header>
+
+    <!-- Main Controls -->
+    <main class="controls">
+      <!-- Free Feature -->
+      <div class="control-group">
+        <div class="control-item" data-feature="messages">
+          <div class="control-info">
+            <span class="control-icon">💬</span>
+            <div class="control-text">
+              <span class="control-label">Blur Messages</span>
+              <span class="control-desc">Hide chat text & previews</span>
+            </div>
+            <span class="badge free">FREE</span>
+          </div>
+          <label class="toggle">
+            <input type="checkbox" id="toggleMessages" checked>
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Pro Features -->
+      <div class="control-group pro-section">
+        <div class="pro-header">
+          <span class="pro-badge">⭐ PRO</span>
+          <span class="pro-label">Premium Features</span>
+        </div>
+
+        <div class="control-item" data-feature="names">
+          <div class="control-info">
+            <span class="control-icon">👤</span>
+            <div class="control-text">
+              <span class="control-label">Blur Names</span>
+              <span class="control-desc">Hide contact & group names</span>
+            </div>
+            <span class="lock-icon" id="lockNames">🔒</span>
+          </div>
+          <label class="toggle">
+            <input type="checkbox" id="toggleNames" disabled>
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+
+        <div class="control-item" data-feature="photos">
+          <div class="control-info">
+            <span class="control-icon">📷</span>
+            <div class="control-text">
+              <span class="control-label">Blur Photos</span>
+              <span class="control-desc">Hide avatars & media</span>
+            </div>
+            <span class="lock-icon" id="lockPhotos">🔒</span>
+          </div>
+          <label class="toggle">
+            <input type="checkbox" id="togglePhotos" disabled>
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <!-- License Section -->
+      <div class="license-section" id="licenseSection">
+        <div class="license-locked" id="licenseLocked">
+          <p class="license-prompt">🔐 Enter Pro License Key</p>
+          <div class="license-input-group">
+            <input type="text" id="licenseInput" placeholder="Enter license key" maxlength="20">
+            <button id="verifyBtn" class="btn-verify">Verify</button>
+          </div>
+          <p class="license-error" id="licenseError"></p>
+          <a href="#" class="upgrade-link" id="upgradeLink">🛒 Get Pro License - ₹150</a>
+        </div>
+
+        <div class="license-unlocked hidden" id="licenseUnlocked">
+          <div class="pro-status">
+            <span class="pro-check">✅</span>
+            <span class="pro-text">Pro License Active</span>
+          </div>
+          <button id="resetLicenseBtn" class="btn-reset">Reset License</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p class="hover-tip">💡 Hover over blurred items to reveal</p>
+      <p class="version">v1.0.0 • Made with ❤️</p>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

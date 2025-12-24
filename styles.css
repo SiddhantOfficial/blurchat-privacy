@@ -1,0 +1,172 @@
+/**
+ * BlurChat - Privacy for WhatsApp Web
+ * Content Stylesheet
+ * 🔍 CrimeMaster DOM: Blur rules with hover reveal per element
+ */
+
+/* ===========================================
+   BLUR FILTERS - Applied via body classes
+   =========================================== */
+
+/* Base blur amount */
+:root {
+  --bc-blur-amount: 8px;
+  --bc-blur-strong: 12px;
+  --bc-transition: 0.15s ease-out;
+}
+
+/* ===========================================
+   MESSAGE BLUR (Free Tier)
+   Applied when body has .bc-blur-messages
+   =========================================== */
+
+/* Main message text containers */
+body.bc-blur-messages [data-pre-plain-text],
+body.bc-blur-messages .message-in .copyable-text,
+body.bc-blur-messages .message-out .copyable-text,
+body.bc-blur-messages ._akbu, /* Message bubble text */
+body.bc-blur-messages .selectable-text,
+body.bc-blur-messages [dir="ltr"].selectable-text,
+body.bc-blur-messages [dir="rtl"].selectable-text,
+body.bc-blur-messages span.selectable-text,
+body.bc-blur-messages div.copyable-text {
+  filter: blur(var(--bc-blur-amount)) !important;
+  transition: filter var(--bc-transition) !important;
+}
+
+/* Message preview in chat list */
+body.bc-blur-messages [data-testid="last-msg-status"],
+body.bc-blur-messages [data-testid="cell-frame-secondary"],
+body.bc-blur-messages ._ao3e, /* Last message preview */
+body.bc-blur-messages span[title][dir] {
+  filter: blur(var(--bc-blur-amount)) !important;
+  transition: filter var(--bc-transition) !important;
+}
+
+/* Hover reveal - Only the hovered element unblurs */
+body.bc-blur-messages [data-pre-plain-text]:hover,
+body.bc-blur-messages .message-in .copyable-text:hover,
+body.bc-blur-messages .message-out .copyable-text:hover,
+body.bc-blur-messages ._akbu:hover,
+body.bc-blur-messages .selectable-text:hover,
+body.bc-blur-messages [dir="ltr"].selectable-text:hover,
+body.bc-blur-messages [dir="rtl"].selectable-text:hover,
+body.bc-blur-messages span.selectable-text:hover,
+body.bc-blur-messages div.copyable-text:hover,
+body.bc-blur-messages [data-testid="last-msg-status"]:hover,
+body.bc-blur-messages [data-testid="cell-frame-secondary"]:hover,
+body.bc-blur-messages ._ao3e:hover,
+body.bc-blur-messages span[title][dir]:hover {
+  filter: none !important;
+}
+
+/* ===========================================
+   NAME BLUR (Pro Tier)
+   Applied when body has .bc-blur-names
+   =========================================== */
+
+/* Chat list contact names */
+body.bc-blur-names [data-testid="cell-frame-title"],
+body.bc-blur-names ._ak8q, /* Contact name in list */
+body.bc-blur-names [aria-label*="chat"] [role="gridcell"] span[title],
+body.bc-blur-names ._ao3e span[title] {
+  filter: blur(var(--bc-blur-amount)) !important;
+  transition: filter var(--bc-transition) !important;
+}
+
+/* Header contact name */
+body.bc-blur-names [data-testid="conversation-info-header-chat-title"],
+body.bc-blur-names header [role="button"] span[title],
+body.bc-blur-names header ._amig,
+body.bc-blur-names ._amie span[title] {
+  filter: blur(var(--bc-blur-amount)) !important;
+  transition: filter var(--bc-transition) !important;
+}
+
+/* Group participant names */
+body.bc-blur-names [data-testid="msg-author-title"],
+body.bc-blur-names ._akbc,
+body.bc-blur-names span[aria-label*="You:"],
+body.bc-blur-names span[aria-label*=":"] {
+  filter: blur(var(--bc-blur-amount)) !important;
+  transition: filter var(--bc-transition) !important;
+}
+
+/* Hover reveal for names */
+body.bc-blur-names [data-testid="cell-frame-title"]:hover,
+body.bc-blur-names ._ak8q:hover,
+body.bc-blur-names [aria-label*="chat"] [role="gridcell"] span[title]:hover,
+body.bc-blur-names ._ao3e span[title]:hover,
+body.bc-blur-names [data-testid="conversation-info-header-chat-title"]:hover,
+body.bc-blur-names header [role="button"] span[title]:hover,
+body.bc-blur-names header ._amig:hover,
+body.bc-blur-names ._amie span[title]:hover,
+body.bc-blur-names [data-testid="msg-author-title"]:hover,
+body.bc-blur-names ._akbc:hover,
+body.bc-blur-names span[aria-label*="You:"]:hover,
+body.bc-blur-names span[aria-label*=":"]:hover {
+  filter: none !important;
+}
+
+/* ===========================================
+   PHOTO BLUR (Pro Tier)
+   Applied when body has .bc-blur-photos
+   =========================================== */
+
+/* Profile photos in chat list */
+body.bc-blur-photos [data-testid="cell-frame-primary"] img,
+body.bc-blur-photos [data-testid="default-user"],
+body.bc-blur-photos [data-testid="default-group"],
+body.bc-blur-photos ._akau img, /* Avatar container */
+body.bc-blur-photos img[src*="pps.whatsapp.net"],
+body.bc-blur-photos div[data-testid="avatar"] img,
+body.bc-blur-photos [role="img"][aria-label] {
+  filter: blur(var(--bc-blur-strong)) !important;
+  transition: filter var(--bc-transition) !important;
+}
+
+/* Header profile photo */
+body.bc-blur-photos header img[draggable="false"],
+body.bc-blur-photos [data-testid="chat-meta-avatar"] img,
+body.bc-blur-photos ._amid img {
+  filter: blur(var(--bc-blur-strong)) !important;
+  transition: filter var(--bc-transition) !important;
+}
+
+/* Image/media in messages */
+body.bc-blur-photos [data-testid="image-thumb"] img,
+body.bc-blur-photos [data-testid="media-canvas"],
+body.bc-blur-photos [data-testid="image-preview"] img,
+body.bc-blur-photos img[src*="mmg.whatsapp.net"] {
+  filter: blur(var(--bc-blur-strong)) !important;
+  transition: filter var(--bc-transition) !important;
+}
+
+/* Hover reveal for photos */
+body.bc-blur-photos [data-testid="cell-frame-primary"] img:hover,
+body.bc-blur-photos [data-testid="default-user"]:hover,
+body.bc-blur-photos [data-testid="default-group"]:hover,
+body.bc-blur-photos ._akau img:hover,
+body.bc-blur-photos img[src*="pps.whatsapp.net"]:hover,
+body.bc-blur-photos div[data-testid="avatar"] img:hover,
+body.bc-blur-photos [role="img"][aria-label]:hover,
+body.bc-blur-photos header img[draggable="false"]:hover,
+body.bc-blur-photos [data-testid="chat-meta-avatar"] img:hover,
+body.bc-blur-photos ._amid img:hover,
+body.bc-blur-photos [data-testid="image-thumb"] img:hover,
+body.bc-blur-photos [data-testid="media-canvas"]:hover,
+body.bc-blur-photos [data-testid="image-preview"] img:hover,
+body.bc-blur-photos img[src*="mmg.whatsapp.net"]:hover {
+  filter: none !important;
+}
+
+/* ===========================================
+   GLOBAL DISABLED STATE
+   =========================================== */
+body.bc-disabled [data-pre-plain-text],
+body.bc-disabled .copyable-text,
+body.bc-disabled .selectable-text,
+body.bc-disabled [data-testid="cell-frame-title"],
+body.bc-disabled img {
+  filter: none !important;
+}
