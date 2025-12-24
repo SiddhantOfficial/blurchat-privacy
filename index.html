@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - BlurChat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1f2c34 0%, #111b21 100%);
+            color: #e9edef;
+            min-height: 100vh;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 40px;
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            color: #00a884;
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+
+        .subtitle {
+            color: #8696a0;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #00a884;
+            margin: 30px 0 15px;
+            font-size: 1.3rem;
+            border-bottom: 1px solid #2a3942;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #e9edef;
+            margin: 20px 0 10px;
+            font-size: 1.1rem;
+        }
+
+        p,
+        li {
+            color: #d1d7db;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            background: rgba(0, 168, 132, 0.1);
+            border-left: 3px solid #00a884;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning {
+            background: rgba(241, 92, 109, 0.1);
+            border-left: 3px solid #f15c6d;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .emoji {
+            font-size: 1.2em;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #2a3942;
+            color: #8696a0;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        a {
+            color: #00a884;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🛡️ Privacy Policy</h1>
+        <p class="subtitle">BlurChat - Privacy for WhatsApp Web</p>
+        <p><strong>Last Updated:</strong> December 25, 2024</p>
+
+        <h2>Overview</h2>
+        <p>BlurChat is a browser extension that adds visual privacy protection to WhatsApp Web by applying CSS blur
+            effects to chat content.</p>
+
+        <div class="warning">
+            <strong>⚠️ Disclaimer:</strong> This extension is developed independently and is <strong>NOT affiliated
+                with, endorsed by, or connected to WhatsApp Inc. or Meta Platforms, Inc.</strong>
+        </div>
+
+        <h2>Data Collection</h2>
+        <div class="highlight">
+            <strong>✅ We do not collect, store, or transmit any personal data.</strong>
+        </div>
+
+        <h3>What We DON'T Collect:</h3>
+        <ul>
+            <li><span class="emoji">❌</span> Message content or text</li>
+            <li><span class="emoji">❌</span> Contact information or names</li>
+            <li><span class="emoji">❌</span> Phone numbers</li>
+            <li><span class="emoji">❌</span> Media files (photos, videos)</li>
+            <li><span class="emoji">❌</span> Usage analytics or statistics</li>
+            <li><span class="emoji">❌</span> Browsing history</li>
+            <li><span class="emoji">❌</span> Location data</li>
+            <li><span class="emoji">❌</span> Any identifiable information</li>
+        </ul>
+
+        <h3>What We Store Locally:</h3>
+        <p>The following data is stored <strong>only on your device</strong> using Chrome's local storage API:</p>
+        <ul>
+            <li><span class="emoji">✅</span> Your blur preference settings (on/off toggles)</li>
+            <li><span class="emoji">✅</span> Pro license key (if activated)</li>
+            <li><span class="emoji">✅</span> Extension enabled state</li>
+        </ul>
+        <p>This data <strong>never leaves your browser</strong> and is not accessible to us or any third party.</p>
+
+        <h2>How the Extension Works</h2>
+        <p>BlurChat works entirely through CSS style injection:</p>
+        <ol>
+            <li>When you visit WhatsApp Web, the extension injects CSS rules</li>
+            <li>These CSS rules apply visual blur filters to selected elements</li>
+            <li>Hovering reveals content temporarily via CSS :hover states</li>
+            <li>No JavaScript reads, processes, or transmits your message content</li>
+        </ol>
+
+        <h2>Network Requests</h2>
+        <div class="highlight">
+            <strong>🔒 This extension makes ZERO network requests.</strong>
+        </div>
+        <p>All functionality is performed locally within your browser. We have no servers, no analytics, and no external
+            dependencies.</p>
+
+        <h2>Third-Party Services</h2>
+        <p>BlurChat does not integrate with any third-party services, APIs, or analytics platforms.</p>
+
+        <h2>Permissions</h2>
+        <p>The extension requests minimal permissions:</p>
+        <ul>
+            <li><strong>storage</strong>: To save your preference settings locally</li>
+            <li><strong>host_permissions (web.whatsapp.com)</strong>: To apply blur styles on WhatsApp Web</li>
+        </ul>
+
+        <h2>Children's Privacy</h2>
+        <p>This extension does not knowingly collect any data from children under 13 years of age.</p>
+
+        <h2>Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Any changes will be reflected in the "Last Updated"
+            date.</p>
+
+        <h2>Contact</h2>
+        <p>For questions about this privacy policy or the extension, please visit our <a
+                href="https://github.com/SiddhantOfficial/blurchat-privacy/issues">GitHub Issues</a> page.</p>
+
+        <footer>
+            <p>BlurChat © 2024 | <a href="https://github.com/SiddhantOfficial/blurchat-privacy">GitHub</a></p>
+            <p>WhatsApp® is a registered trademark of WhatsApp Inc.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
